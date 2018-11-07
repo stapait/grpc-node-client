@@ -25,7 +25,7 @@ const benchmarkGRPC = async () => {
   
   return new Promise((resolve) => {
     for (let i = 1; i < totalRequests; i++) {
-      calculatorService.Sum({ number1: Math.round(Math.random() * 1000), number2: Math.round(Math.random() * 1000) }, (err, response) => {
+      calculatorService.Sum({ number1: 10, number2: 20 }, (err, response) => {
         if (err) {
           console.log(err);
         }
